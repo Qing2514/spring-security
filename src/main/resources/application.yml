@@ -1,0 +1,6 @@
+# 自定义认证登录的用户名和密码
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
