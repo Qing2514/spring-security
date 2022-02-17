@@ -26,17 +26,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // 基于内存方式，构建两个账号，一个管理员，一个普通用户
-        auth.inMemoryAuthentication()
-                .withUser("admin")
-                .password(bCryptPasswordEncoder().encode("123456"))
-                .roles("admin");
-
-        auth.inMemoryAuthentication()
-                .withUser("user")
-                .password(bCryptPasswordEncoder().encode("123456"))
-                .roles("user");
-    }
+    // @Override
+    // protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    //     // 基于内存方式，构建两个账号，一个管理员，一个普通用户
+    //     auth.inMemoryAuthentication()
+    //             .withUser("admin")
+    //             .password(bCryptPasswordEncoder().encode("123456"))
+    //             .roles("admin");
+    //
+    //     auth.inMemoryAuthentication()
+    //             .withUser("user")
+    //             .password(bCryptPasswordEncoder().encode("123456"))
+    //             .roles("user");
+    // }
 }

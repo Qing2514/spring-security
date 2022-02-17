@@ -1,6 +1,16 @@
-# 自定义认证登录的用户名和密码
+server:
+  port: 80
+
 spring:
-  security:
-    user:
-      name: admin
-      password: 123456
+#  # 自定义认证登录的用户名和密码
+#  security:
+#    user:
+#      name: admin
+#      password: 123456
+  datasource:
+    # 配置 druid 数据源
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:330/springsecurity
+      username: root
+      password: 2514632453
